@@ -14,8 +14,12 @@ class Main {
       System.out.println("Difference:" + (a-b));
       System.out.println("Product:" + a*b);
       if (b==0){
+          if (a!=0){
           System.out.println("Divisor equals zero.");}
-      else {
+          else{
+          System.out.println("Equation has infinity mant roots");
+          }
+      }else {
           System.out.println("Quotient:"+a/b);}
       } 
  
