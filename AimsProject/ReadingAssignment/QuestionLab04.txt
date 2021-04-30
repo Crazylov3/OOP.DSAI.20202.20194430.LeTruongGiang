@@ -1,0 +1,21 @@
+1. We should implement the Comparable interface in class which is a element of array.
+	Eg: We have an arraylist: ArrayList<Student> list = new ArrayList<Student>(), then
+we wanna sort this list, we should implement Comparable in class Student
+2. we can follow this:
+
+public int compareTo(Student o) {
+	if (this.getCode() > o.getCode()) {
+		return 1;
+	}
+	if (this.getCode() < o.getCode()) {
+		return -1;
+	}
+	return 0;
+}
+
+then we write Collection.sort(array); if we sort with neutral order
+   	      Collection.reverse(array); if we want to reverse the ordering.
+
+3.  Yes, we can
+4.  i will use the advantage of lambda function to handle this easier.
+ollections.sort(list,Comparator.comparing(Media::getTitle,Collections.reverseOrder()).thenComparing(Media::getLenth).thenComparing(Media::getCost));   
