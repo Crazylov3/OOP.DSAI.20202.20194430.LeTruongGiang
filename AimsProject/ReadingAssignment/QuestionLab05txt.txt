@@ -1,0 +1,4 @@
+1.The Aims class must be updated to handle any exceptions generated when the play() methods are
+called. What happens when you don’t update for them to catch?
+  + Because in the play() methods, we declare the exception, sao at Aims class we must be add throws keyword or use try catch block, otherwise the programme
+with raise the error "unreported exception java.lang.Exception".
