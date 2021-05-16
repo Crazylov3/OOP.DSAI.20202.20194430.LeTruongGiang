@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #721799;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <StackPane fx:id="pane" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="BOTTOM_CENTER" maxHeight="40.0" prefHeight="50.0" StackPane.alignment="BOTTOM_CENTER">
+                    <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane>
+                           <children>
+                              <Label fx:id="moment" layoutX="9.0" layoutY="2.0" text="00:00" textFill="WHITE">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                                    <Slider fx:id="progressBar" focusTraversable="false" layoutX="48.0" layoutY="3.0" majorTickUnit="50.0" minorTickCount="5" nodeOrientation="LEFT_TO_RIGHT" prefHeight="14.0" prefWidth="543.0" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                        <HBox alignment="BOTTOM_CENTER" maxHeight="40.0" prefHeight="30.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#playVideo" text="Play">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" left="-130.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#pauseVideo" text="Pause">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#furtherSlowDownVideo" text="&lt;&lt;&lt;">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#back5" text="-5s">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#skip5" text="+5s">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#furtherSpeedUpVideo" text="&gt;&gt;&gt;">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                        <AnchorPane>
+                           <children>
+                              <ImageView fx:id="muted" cache="true" fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="4.0" onMouseClicked="#unmute" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="3.0">
+                                 <image>
+                                    <Image url="@muted.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="volumn" cache="true" fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="6.0" onMouseClicked="#mute" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="3.0">
+                                 <image>
+                                    <Image url="@volumn.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                                <Slider fx:id="volumnSlider" value="50.0">
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" />
+                                    </HBox.margin>
+                                </Slider>
+                            </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                        </HBox>
+                    </children>
+                    <StackPane.margin>
+                        <Insets />
+                    </StackPane.margin>
+                </VBox>
+            <ImageView fx:id="mediaView" cache="true" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@dia.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets top="-50.0" />
+               </StackPane.margin>
+            </ImageView>
+            </children>
+        </StackPane>
+    </center>
+</BorderPane>
